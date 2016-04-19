@@ -19,7 +19,7 @@ var MainTabBar = React.createClass({
 
   displayName: 'TabBarExample',
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       selectedTab: 'redTab',
       notifCount: 0,
@@ -27,29 +27,29 @@ var MainTabBar = React.createClass({
     };
   },
 
-  _renderContent: function(color: string, pageText: string, num?: number) {
+  _renderContent: function (color: string, pageText: string, num?: number) {
     return (
-      <View style={[styles.tabContent, {backgroundColor: color}]}>
+      <View style={[styles.tabContent, { backgroundColor: color }]}>
         <Text style={styles.tabText}>{pageText}</Text>
         <Text style={styles.tabText}>{num} re-renders of the {pageText}</Text>
       </View>
     );
   },
 
-  render: function() {
+  render: function () {
     return (
       <TabBarIOS
         tintColor="white"
         barTintColor="darkslateblue">
         <TabBarIOS.Item
           title="Blue Tab"
-          icon={{uri: base64Icon, scale: 3}}
+          icon={{ uri: base64Icon, scale: 3 }}
           selected={this.state.selectedTab === 'blueTab'}
           onPress={() => {
             this.setState({
               selectedTab: 'blueTab',
             });
-          }}>
+          } }>
           <PhotoTabNav/>
         </TabBarIOS.Item>
         <TabBarIOS.Item
@@ -61,8 +61,8 @@ var MainTabBar = React.createClass({
               selectedTab: 'redTab',
               notifCount: this.state.notifCount + 1,
             });
-          }}>
-          {this._renderContent('#783E33', 'Red Tab', this.state.notifCount)}
+          } }>
+          {this._renderContent('#783E33', 'Red Tab', this.state.notifCount) }
         </TabBarIOS.Item>
         <TabBarIOS.Item
           systemIcon="contacts"
@@ -73,8 +73,8 @@ var MainTabBar = React.createClass({
               selectedTab: 'greenTab',
               presses: this.state.presses + 1
             });
-          }}>
-          {this._renderContent('#21551C', 'Green Tab', this.state.presses)}
+          } }>
+          {this._renderContent('#21551C', 'Green Tab', this.state.presses) }
         </TabBarIOS.Item>
       </TabBarIOS>
     );

@@ -17,24 +17,24 @@ var PhotoTabItemView = React.createClass({
 
   displayName: 'PhotoTabItemView',
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {
     };
   },
 
   onPress() {
-      this.props.navigator.push({
-          name: 'PhotoTabItemView0',
-          component: PhotoTabItemView0
-      });
+    this.props.navigator.push({
+      name: 'PhotoTabItemView0',
+      component: PhotoTabItemView0
+    });
   },
 
-  render: function() {
+  render: function () {
     return (
-      <View style={{flexDirection: 'row', height: 100, padding: 20}}>
-        <View style={{backgroundColor: 'blue', flex: 0.5}} />
-        <View style={{backgroundColor: 'red', flex: 0.5}} />
-        <Text onPress={this.onPress.bind(this)}>
+      <View style={{ flexDirection: 'row', height: 100, padding: 20 }}>
+        <View style={{ backgroundColor: 'blue', flex: 0.5 }} />
+        <View style={{ backgroundColor: 'red', flex: 0.5 }} />
+        <Text onPress={()=>this.onPress() }>
           Go to Next Item!
         </Text>
       </View>

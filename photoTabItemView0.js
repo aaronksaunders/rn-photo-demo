@@ -28,7 +28,7 @@ var PhotoTabItemView0 = React.createClass({
       <View style={styles.content}>
           <View style={{width:120,  padding: 20, backgroundColor: 'green'}}/>
           <Text
-              onPress={this.onPress()}
+              onPress={()=>this.onPress()}
               style={styles.button}>
             Go Back!
           </Text>

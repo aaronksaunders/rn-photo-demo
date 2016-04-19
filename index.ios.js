@@ -14,7 +14,7 @@ var {
 } = React;
 
 var photouploadReact = React.createClass({
-  render: function() {
+  render: function () {
     return <TabBarExample/>;
   }
 });
